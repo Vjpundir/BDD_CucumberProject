@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import utility.WaitHelper;
+
 public class HomePage extends BasePage {
 
 	public HomePage(WebDriver driver) {
@@ -29,6 +31,9 @@ public class HomePage extends BasePage {
 	}
 	
 	
-	
+	public void getRegisterUserInfo()
+	{
+		WaitHelper.waitForElementVisible(driver, registerUser, 3);
+	}
 
 }
