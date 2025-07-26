@@ -18,6 +18,27 @@ If you're getting started with BDD + Cucumber + Selenium, this project will give
 
 I'll continue adding more scenarios and enhancements over time — including validations, utilities, data-driven testing, and reporting features and so on.....
 
+✅ BDD Cucumber Framework Folder Structure
+
+BDD_CucumberFramework/
+│
+├── src/
+│   └── test/
+│       ├── java/
+│       │   ├── base/                # Common setup (Hooks, Base classes)
+│       │   ├── pageobjects/         # Page classes (POM design pattern)
+│       │   ├── stepdefinitions/     # Glue code: Step Definitions
+│       │   └── runners/             # Test Runner class
+│       │
+│       └── resources/
+│           └── features/            # All .feature files (Gherkin syntax)
+│
+├── target/                          # Compiled classes (should be ignored in .gitignore)
+├── pom.xml                          # Maven configuration (dependencies, plugins)
+├── testng.xml (optional)            # For TestNG integration
+└── .gitignore
+
+
 Thanks for checking it out!
 
 Best regards,
