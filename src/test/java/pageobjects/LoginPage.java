@@ -11,16 +11,35 @@ public class LoginPage extends BasePage {
 
 	}
 
-	// ########## WebElements ###################
+	// ###### Web Elements ##############################
 
-	@FindBy(xpath = "//a[@id='login_Layer']")
-	WebElement loginBtn;
+	@FindBy(xpath = "//input[@placeholder='Enter your active Email ID / Username']")
+	WebElement userName;
 
-	
-	//############ Action Item  ####################
-	
-	public void clickLoginOptions() {
-		loginBtn.click();
+	@FindBy(xpath = "//input[@placeholder='Enter your password']")
+	WebElement password;
+
+	@FindBy(xpath = "//button[@type='submit']")
+	WebElement submitButton;
+
+	@FindBy(xpath = "//a[@class='nI-gNb-header__logo nI-gNb-company-logo']")
+	WebElement appLogo;
+
+	// ################## Actions #############################
+
+	public void enterLoginDetails(String uname, String pwd) {
+		userName.sendKeys(uname);
+		password.sendKeys(pwd);
+
+	}
+
+	public void clickSubmitBtn() {
+
+		submitButton.click();
+	}
+
+	public boolean isLogoDisplay() {
+		return appLogo.isDisplayed();
 	}
 
 }
