@@ -17,22 +17,17 @@ public class HomePage extends BasePage {
 
 	@FindBy(xpath = "//a[@id='login_Layer']")
 	WebElement loginBtn;
-	
-	
-	@FindBy(xpath ="//a[text()='Register for free']")
+
+	@FindBy(xpath = "//a[text()='Register for free']")
 	WebElement registerUser;
-	
-	
-	
-	//############ Action Item  ####################
-	
+
+	// ############ Action Item ####################
+
 	public void clickLoginOptions() {
 		loginBtn.click();
 	}
-	
-	
-	public void getRegisterUserInfo()
-	{
+
+	public void getRegisterUserInfo() {
 		WaitHelper.waitForElementVisible(driver, registerUser, 3);
 	}
 
